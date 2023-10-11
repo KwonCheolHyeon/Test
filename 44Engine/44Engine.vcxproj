@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2fa04ac7-6017-43cf-90f2-767289b68c11}</ProjectGuid>
+    <RootNamespace>My44Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <ProjectName>Client</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg">
+    <VcpkgEnabled>false</VcpkgEnabled>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir);$(SolutionDir)Engine_SOURCE;$(SolutionDir)\External\fbx\include;$(SolutionDir)\External\PhysX\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Engine_SOURCE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\x64\Debug\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir);$(SolutionDir)Engine_SOURCE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Engine_SOURCE.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\x64\Release\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Engine_SOURCE\ImGuizmo.h" />
+    <ClInclude Include="..\Engine_SOURCE\mdCreeperFlashScript.h" />
+    <ClInclude Include="..\Engine_SOURCE\mdPlayerHitScript.h" />
+    <ClInclude Include="..\Engine_SOURCE\mdZombieAniScript.h" />
+    <ClInclude Include="..\Engine_SOURCE\mdZombieScript.h" />
+    <ClInclude Include="..\Engine_SOURCE\yaCameraScript.h" />
+    <ClInclude Include="..\Engine_SOURCE\yaPlayer.h" />
+    <ClInclude Include="..\Engine_SOURCE\yaPlayerScript.h" />
+    <ClInclude Include="44Engine.h" />
+    <ClInclude Include="mdAnimationFunctionTestScene.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="guiComponent.h" />
+    <ClInclude Include="guiConsole.h" />
+    <ClInclude Include="guiEditorObjectManager.h" />
+    <ClInclude Include="guiGame.h" />
+    <ClInclude Include="guiGizmo.h" />
+    <ClInclude Include="guiHierarchy.h" />
+    <ClInclude Include="guiInspector.h" />
+    <ClInclude Include="guiMaterial.h" />
+    <ClInclude Include="guiMesh.h" />
+    <ClInclude Include="guiMeshRenderer.h" />
+    <ClInclude Include="guiProject.h" />
+    <ClInclude Include="guiResource.h" />
+    <ClInclude Include="guiTexture.h" />
+    <ClInclude Include="guiTransform.h" />
+    <ClInclude Include="guiTreeWidget.h" />
+    <ClInclude Include="guiWidget.h" />
+    <ClInclude Include="guiWidgetManager.h" />
+    <ClInclude Include="guiYamYamEditor.h" />
+    <ClInclude Include="imconfig.h" />
+    <ClInclude Include="imgui.h" />
+    <ClInclude Include="imgui_impl_dx11.h" />
+    <ClInclude Include="imgui_impl_win32.h" />
+    <ClInclude Include="imgui_internal.h" />
+    <ClInclude Include="imstb_rectpack.h" />
+    <ClInclude Include="imstb_textedit.h" />
+    <ClInclude Include="imstb_truetype.h" />
+    <ClInclude Include="guiListWidget.h" />
+    <ClInclude Include="mdDamageScript.h" />
+    <ClInclude Include="mdNavTestScene.h" />
+    <ClInclude Include="mdPhysXTestScene.h" />
+    <ClInclude Include="mdStageColliderObject.h" />
+    <ClInclude Include="mdUITestScene.h" />
+    <ClInclude Include="mdVindicator.h" />
+    <ClInclude Include="mdVindicatorAniScript.h" />
+    <ClInclude Include="mdVindicatorScript.h" />
+    <ClInclude Include="mdZombie.h" />
+    <ClInclude Include="mdZombieTestScene.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="guiDebugObject.h" />
+    <ClInclude Include="guiEditor.h" />
+    <ClInclude Include="guiEditorObject.h" />
+    <ClInclude Include="yaPlayScene.h" />
+    <ClInclude Include="yaTitleScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Engine_SOURCE\ImGuizmo.cpp" />
+    <ClCompile Include="..\Engine_SOURCE\mdCreeperFlashScript.cpp" />
+    <ClCompile Include="..\Engine_SOURCE\mdPlayerHitScript.cpp" />
+    <ClCompile Include="..\Engine_SOURCE\mdZombieAniScript.cpp" />
+    <ClCompile Include="..\Engine_SOURCE\mdZombieScript.cpp" />
+    <ClCompile Include="..\Engine_SOURCE\yaCameraScript.cpp" />
+    <ClCompile Include="..\Engine_SOURCE\yaPlayer.cpp" />
+    <ClCompile Include="..\Engine_SOURCE\yaPlayerScript.cpp" />
+    <ClCompile Include="mdAnimationFunctionTestScene.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
+    <ClCompile Include="guiComponent.cpp" />
+    <ClCompile Include="guiConsole.cpp" />
+    <ClCompile Include="guiEditor.cpp" />
+    <ClCompile Include="guiEditorObjectManager.cpp" />
+    <ClCompile Include="guiGame.cpp" />
+    <ClCompile Include="guiGizmo.cpp" />
+    <ClCompile Include="guiHierarchy.cpp" />
+    <ClCompile Include="guiInspector.cpp" />
+    <ClCompile Include="guiMaterial.cpp" />
+    <ClCompile Include="guiMesh.cpp" />
+    <ClCompile Include="guiMeshRenderer.cpp" />
+    <ClCompile Include="guiProject.cpp" />
+    <ClCompile Include="guiResource.cpp" />
+    <ClCompile Include="guiTexture.cpp" />
+    <ClCompile Include="guiTransform.cpp" />
+    <ClCompile Include="guiTreeWidget.cpp" />
+    <ClCompile Include="guiWidget.cpp" />
+    <ClCompile Include="guiWidgetManager.cpp" />
+    <ClCompile Include="guiYamYamEditor.cpp" />
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_draw.cpp" />
+    <ClCompile Include="imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui_tables.cpp" />
+    <ClCompile Include="imgui_widgets.cpp" />
+    <ClCompile Include="guiListWidget.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="guiDebugObject.cpp" />
+    <ClCompile Include="guiEditorObject.cpp" />
+    <ClCompile Include="mdDamageScript.cpp" />
+    <ClCompile Include="mdNavTestScene.cpp" />
+    <ClCompile Include="mdPhysXTestScene.cpp" />
+    <ClCompile Include="mdStageColliderObject.cpp" />
+    <ClCompile Include="mdUITestScene.cpp" />
+    <ClCompile Include="mdVindicator.cpp" />
+    <ClCompile Include="mdVindicatorAniScript.cpp" />
+    <ClCompile Include="mdVindicatorScript.cpp" />
+    <ClCompile Include="mdZombie.cpp" />
+    <ClCompile Include="mdZombieTestScene.cpp" />
+    <ClCompile Include="yaPlayScene.cpp" />
+    <ClCompile Include="yaTitleScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="44Engine.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="44Engine.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Engine_SOURCE\Engine_SOURCE.vcxproj">
+      <Project>{6dafa788-499e-4b34-98ec-f4075a483b9e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
